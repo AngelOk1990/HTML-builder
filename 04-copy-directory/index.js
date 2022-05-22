@@ -3,7 +3,7 @@ const fs = require('fs')
 const fsPromises = fs.promises;
 
 
-fs.mkdir('./04-copy-directory/files-copy', {recursive: true}, (err) => {
+fs.mkdir(path.join(__dirname, 'files-copy'), {recursive: true}, (err) => {
     if (err) throw err
 })
 
