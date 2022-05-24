@@ -24,7 +24,6 @@ fs.readdir(copyFolder, (err, copies) => {
         const pathOfCopy = path.join(copyFolder, copy)
         fs.stat(pathForCopy, (err, stats) => {
             if (err) {
-                console.log('Error')
                 fs.unlink(pathOfCopy, function (err) {
                     if(err) return console.error(err)
                 })
